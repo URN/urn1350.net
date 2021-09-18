@@ -1,0 +1,20 @@
+
+#__next {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+footer {
+    align-self: flex-end;
+    margin-top: auto;
+    padding: 1rem;
+    column-count: 2;
+    display: block !important;
+    font-size: 1rem;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}

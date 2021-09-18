@@ -1,0 +1,24 @@
+.now-playing {
+    max-width: min(50rem, 95vw);
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.now-playing .show-name{
+    //display: block;
+    font-weight: bolder;
+    font-style: oblique;
+    font-size: 1.25rem;
+    margin: 0 1rem;
+}
+
+.now-playing .show-time{
+    //display: block;
+    font-weight: lighter;
+    margin: 0 1rem;
+    float:right;
+}
+.now-playing audio{
+    display: block;
+    margin: 0.5rem auto;
+}
