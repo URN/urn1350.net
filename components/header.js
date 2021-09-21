@@ -66,8 +66,8 @@ function _Image(params) {
         </AppBar>
         <AppBar color="secondary" position="static" component="nav">
             <Toolbar>
-            <Button>Home</Button>
-            <Button>Podcasts</Button>
+            <Button href="/">Home</Button>
+            <Button href="/podcasts">Podcasts</Button>
             <Button>Listen Now</Button>
           
         </Toolbar>

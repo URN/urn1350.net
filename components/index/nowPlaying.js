@@ -8,11 +8,11 @@ import Settings from '../../settings.json';
       return (
         <Paper className="now-playing"  elevation={3}>
             <h1>Now Playing</h1>
-            <span class="show-name">Get this from an API Saturday Rotational 1 - Reece Davis, Yalini Ravindra, Ioana Iftode, Dom Nolan</span>
-            <span class="show-time">From TIME-TIME</span>
+            <span className="show-name">Get this from an API Saturday Rotational 1 - Reece Davis, Yalini Ravindra, Ioana Iftode, Dom Nolan</span>
+            <span className="show-time">From TIME-TIME</span>
             <br/>
             <audio src=""  controls />
         </Paper>
       );
     }
-}
+}11

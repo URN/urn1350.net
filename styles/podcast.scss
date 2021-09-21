@@ -1,0 +1,48 @@
+.podcast-card {
+    width: min(15rem, 35vw);
+    height: 20rem;
+    margin: 1rem;
+    display: inline-block
+}
+
+.podcast-holder {
+    height: 25rem;
+    overflow: scroll hidden;
+    white-space: nowrap;
+    margin: 2rem auto;
+}
+
+.podcast-holder.full {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    overflow: inherit;
+}
+
+.large-icon {
+    font-size:  min(14rem, 32.5vw) !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.podcast-episode{
+    display: flex;
+}
+
+.podcast-episode img{
+    max-width: 15em;
+    object-fit: scale-down;
+    margin-bottom: auto;
+}
+.podcast-episode {
+    margin: 2em 0;
+}
+
+.podcast-episode > div {
+    width: 100%;
+}
+audio{
+    width: 100%;
+}

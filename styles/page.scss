@@ -1,0 +1,54 @@
+@mixin min($bp, $max: "null", $device: "screen") {
+    @if $max == "null" {
+      @media only #{$device} and (min-width: #{$bp}) {
+        @content;
+      }
+    } @else {
+      @media only #{$device} and (min-width: #{$bp}) and (max-width: #{$max}) {
+        @content;
+      }
+    }
+  }
+  
+  @function bp($bp) {
+    @return map-get($breakpoints, $bp);
+  }
+  
+  $breakpoints: (
+    na: 0px,
+    // For BS grid
+      xs: 320px,
+    // Smartphone
+      sm: 600px,
+    // Tablets
+      md: 900px,
+    // Tablets Landscape and small desktops
+      lg: 1200px,
+    // Desktops
+      xl: 1800px,
+    // Large Desktop
+  );
+  
+  @function container($container-size, $true-val: false) {
+    @return map-get($container-sizes, $container-size);
+  }
+  
+  $container-sizes: (
+    sm: 95vw,
+    lg: 60rem,
+  );
+  
+  main {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  
+    &:not(.is-fluid) {
+      margin: 0 auto;
+  
+      @each $bp, $container-size in $container-sizes {
+        @include min(#{bp(#{$bp})}) {
+          width: container(#{$bp});
+        }
+      }
+    }
+  }
