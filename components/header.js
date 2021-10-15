@@ -59,7 +59,7 @@ function _Image(params) {
       <AppBar position="static" component="div">
         <Toolbar>
           <Typography variant="h6" component="span" className="title">
-            <img src="/images/logo.png" />
+            <img src={`${Settings.cdnUrl}/content/images/logo.png`} />
             {Settings.siteTitle}
           </Typography>
         </Toolbar>

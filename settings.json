@@ -1,5 +1,6 @@
 {
     "siteTitle":"University Radio Nottingham",
     "siteSubtitle":"Your Music. Your News. Your Student Sound.",
-    "apiUrl":"http://172.29.2.108:3001"
+    "apiUrl":"http://localhost:3001",
+    "cdnUrl":"https://content.urn1350.net"
 }

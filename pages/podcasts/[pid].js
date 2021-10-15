@@ -1,6 +1,8 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
+import Button from '@material-ui/core/Button';
+
 import Axios from 'axios';
 
 import {PodcastEpisode} from '../../components/podcastEpisode';
@@ -21,7 +23,6 @@ export default function Page({data}) {
       </>
     );
   }
-  console.log(data);
   return (
     <>
       <Header
@@ -31,7 +32,11 @@ export default function Page({data}) {
       />
       <main>
         <h1>{data.title}</h1>
-        <span className="description">{data.description}</span>
+        <p className="description">{data.description}</p>
+        <Button>Itunes</Button>
+        <Button href={`https://audioboom.com/channels/${data.id}.rss`}>RSS</Button>
+        <Button>Spotify</Button>
+
         {
             data.memberships.map(x=>(<PodcastEpisode data={x}/>))
         }
