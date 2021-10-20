@@ -1,6 +1,23 @@
 .schedule {
-    min-width: 30rem;
     padding: 1rem;
+    margin: 1rem;
+}
+
+.schedule-parent {
+    min-width: 30rem;
     margin: 2rem;
     display: inline-block;
 }
+
+.schedule-parent iframe {
+    width: 100%;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.spotify{ padding: 0;}

@@ -38,7 +38,7 @@ export default function Page({data}) {
         <Button>Spotify</Button>
 
         {
-            data.memberships.map(x=>(<PodcastEpisode data={x}/>))
+            data.episodes.map(x=>(<PodcastEpisode data={x} show={data.slug} key={x.slug}/>))
         }
         </main>
       <Footer/>
@@ -52,9 +52,8 @@ export async function getServerSideProps(context) {
   var data = null;
   try {
    data = (
-    await Axios.get(`${Settings.apiUrl}/podcasts/${context.query.pid}/`)
+    await Axios.get(`${Settings.podcastUrl}/${context.query.pid}.json`)
   ).data;
-  console.log(data);
    } catch (err){
 
    }

@@ -19,12 +19,9 @@ import Settings from '../../settings.json';
     // pass form data
     // get it from state
     let that = this;
-    console.log(e)
     const formData = {msg: that.state.msg};
-    console.log(formData)
     var x = await Axios.post("/api/message" ,formData)
 
-    console.log(x.data)
     this.setState({
       ...this.state,
       msg: ""

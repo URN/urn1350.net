@@ -3,47 +3,35 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import Markdown from 'markdown-to-jsx';
+
+import Settings from '../settings.json';
 
 
+export function PodcastEpisode({data, show}) {
+  let img = "";
+  if(true) {
+    img = `${Settings.podcastUrl}/${show}/${data.slug}.jpg`;
+  }
+  else {
+    img = `${Settings.podcastUrl}/${show}.jpg`
+  }
 
-const columns = [
-  {
-    field: 'title',
-    headerName: 'Title',
-    width: 300,
-    editable: false,
-  },
-  {
-    field: 'description',
-    headerName: 'Description',
-    width: 500,
-    editable: false,
-  },
-  {
-    field: 'updated_at',
-    headerName: 'Age',
-    type: 'number',
-    width: 150,
-    editable: false,
-  },
-
-];
-
-export function PodcastEpisode({data}){
   return (
-  <Card className="podcast-episode">
-
+  <Card className="podcast-episode" key={data.slug}>
           <CardMedia
             component="img"
-            image={data.audio_clip.urls.image}
-            alt={data.audio_clip.title}
-          />
+            image={img}
+            alt={data.name}
+            />
           <CardContent>
-            <Typography gutterBottom variant="h3" component="div">
-              {data.audio_clip.title}
+            <Typography gutterBottom variant="h3" component="div" key="title">
+              {data.name}
             </Typography>
-            <audio src={data.audio_clip.urls.high_mp3} controls />
-            <div dangerouslySetInnerHTML={{__html: data.audio_clip.formatted_description}} />
+            <audio src={`${Settings.podcastUrl}/${show}/${data.slug}.mp3`} controls key="audio" />
+            <Markdown options={{ forceBlock: false }} key="text">
+            {data.description}
+          </Markdown>
           </CardContent>
   </Card>);
 }

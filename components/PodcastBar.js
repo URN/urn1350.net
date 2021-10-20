@@ -21,18 +21,17 @@ export default class PodcastBar extends React.Component {
 
     componentDidMount(){
         const that = this;
-        Axios.get(`${Settings.apiUrl}/podcasts`).then(x => {
+        Axios.get(`${Settings.podcastUrl}/hstp.json`).then(x => {
             var y = x.data;
-            console.log(y);
             if(!this.props.full){
-                y.playlists = x.data.playlists.slice(0,3);
+                y.podcasts = x.data.podcasts.slice(0,3);
             }
             that.setState(y);
         })
     }
 
     render() {
-        if(this.state.playlists){
+        if(this.state.podcasts){
             return (
                 <>
                 {
@@ -40,7 +39,7 @@ export default class PodcastBar extends React.Component {
                 }
                   <div className={`podcast-holder ${this.props.full?"full":""}`}>
                   {
-                      this.state.playlists.map(x=><PodcastCard data={x} key={x.slug}/>)
+                      this.state.podcasts.map(x=><PodcastCard data={x} key={x.slug}/>)
                   }
                   
                   {this.props.full?<></>:<Card className="podcast-card">

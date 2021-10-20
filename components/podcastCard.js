@@ -13,12 +13,12 @@ import Settings from '../settings.json';
         <CardActionArea href={`/podcasts/${this.props.data.slug}`}>
           <CardMedia
             component="img"
-            image={this.props.data.image}
-            alt={this.props.data.slug}
+            image={`${Settings.podcastUrl}/${this.props.data.slug}.jpg`}
+            alt={this.props.data.name}
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
-              {this.props.data.title}
+              {this.props.data.name}
             </Typography>
             <Typography noWrap>
                 {this.props.data.description}
