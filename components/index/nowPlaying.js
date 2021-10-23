@@ -3,15 +3,31 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Axios from 'axios';
+import YAML from 'yaml';
 
 import Settings from '../../settings.json';
   
+function pm(x)
+{
+  if(x == 12)
+  return x;
+
+  return x - 12;
+}
+
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
   export default class ImageHeader extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { msg: ""};
-      this.updateBasket = this.update.bind(this);
-      this.proceedToPayment = this.send_message.bind(this);
+      this.state = { msg: "", schedule: null};
+      this.send_message = this.send_message.bind(this);
+      Axios.get(`${Settings.cdnUrl}/schedule.yml`).then(r => {
+        const schedule = YAML.parse(r.data)
+        this.setState({
+          ...this.state,
+          schedule
+        })
+      })
     }
 
     send_message = async e => {
@@ -38,13 +54,50 @@ import Settings from '../../settings.json';
 }
 
     render() {
+      let show_name = "";
+      let time = "";
+
+      if(this.state.schedule != null )
+      {
+        const d = new Date()
+        let days_schedule = this.state.schedule[days[d.getDay()]]
+
+        let current_show = Object.keys(days_schedule).map(
+          key => 
+            [key, days_schedule[key]]
+        ).filter(
+          ([key, value]) => value.start <= d.getHours() && d.getHours() < value.end 
+        )[0];
+        
+        show_name = current_show[0];
+
+        let s = current_show[1].start;
+        let e = current_show[1].end;
+          
+        if ( e == 24){
+          time = `${pm(s)}pm-12am`
+        }
+        else if(e >= 12)
+        {
+          if(s >= 12){
+            time = `${pm(s)}-${pm(e)}pm`
+          }
+          else {
+            time = `${s}am-${pm(e)}pm`
+          }
+        } else {
+          time = `${s}-${e}am`
+        }
+        
+      }
+
       return (
         
         <Paper className="now-playing"  elevation={3}>
                 
             <h1>Now Playing</h1>
-            <span className="show-name">Get this from an API Saturday Rotational 1 - Reece Davis, Yalini Ravindra, Ioana Iftode, Dom Nolan</span>
-            <span className="show-time">From TIME-TIME</span>
+            <span className="show-name">{show_name}</span>
+            <span className="show-time">From {time}</span>
             <br/>
             <audio src="https://live.urn1350.net/listen"  controls />
             <form onSubmit={this.handleOnSubmit}>

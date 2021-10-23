@@ -26,16 +26,13 @@ export default function Page({data}) {
   return (
     <>
       <Header
-        title={`${data.title} - ${Settings.siteTitle}`}
+        title={`${data.name} - ${Settings.siteTitle}`}
         image={data.image}
         description={data.description}
       />
       <main>
-        <h1>{data.title}</h1>
+        <h1>{data.name}</h1>
         <p className="description">{data.description}</p>
-        <Button>Itunes</Button>
-        <Button href={`https://audioboom.com/channels/${data.id}.rss`}>RSS</Button>
-        <Button>Spotify</Button>
 
         {
             data.episodes.map(x=>(<PodcastEpisode data={x} show={data.slug} key={x.slug}/>))

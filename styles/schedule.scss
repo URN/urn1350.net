@@ -1,17 +1,22 @@
 .schedule {
     padding: 1rem;
     margin: 1rem;
+    text-align: center;
+    height: 425px;
+    margin-top:12.5px;
+    margin-bottom: 25px;
 }
 
 .schedule-parent {
     min-width: 30rem;
-    margin: 2rem;
+    margin: 0 2rem;
     display: inline-block;
 }
 
 .schedule-parent iframe {
     width: 100%;
 }
+.schedule h1 {margin:  0; }
 
 .index-container {
     display: flex;
@@ -21,3 +26,73 @@
 }
 
 .spotify{ padding: 0;}
+
+.twitter-card {
+    width: 400px;
+    height: 750px;
+    margin: 1rem;
+}
+
+.twitter-card a.twitter-timeline {
+    display: none;
+}
+
+.speech {
+    background-color: #ea4b2a !important;
+}
+
+.news {
+    background-color: #007a76 !important;
+}
+.after-dark {
+    background-color: #2e343f !important;
+}
+
+.sport {
+    background-color: #008ac4 !important;
+}
+.daytime {
+    background-color: #c60047 !important;
+}
+
+.show-name {
+    font-weight: bold;
+}
+
+.automation {
+    display: none;
+}
+
+.show {
+    color: white !important;
+    padding: 0.05rem;
+
+}
+.schedule .MuiButtonBase-root {
+    margin: 0.5rem;
+}
+
+.day-container {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.day {
+    width: 20rem;
+    padding: 1rem 1rem;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.day h1 {
+    margin: 0;
+}
+
+.day .show-name {
+    max-width: 8rem;
+}
+.day .show-time {
+    max-width: 5rem;
+}

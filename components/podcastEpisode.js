@@ -7,6 +7,15 @@ import Markdown from 'markdown-to-jsx';
 
 import Settings from '../settings.json';
 
+function DateString(date) {
+  let d = new Date(date);
+  return d.toLocaleString('en-GB', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  });
+}
+
 
 export function PodcastEpisode({data, show}) {
   let img = "";
@@ -18,7 +27,7 @@ export function PodcastEpisode({data, show}) {
   }
 
   return (
-  <Card className="podcast-episode" key={data.slug}>
+  <Card className="podcast-episode" key={data.slug} elevation="3">
           <CardMedia
             component="img"
             image={img}
@@ -28,6 +37,7 @@ export function PodcastEpisode({data, show}) {
             <Typography gutterBottom variant="h3" component="div" key="title">
               {data.name}
             </Typography>
+            <span className="show-time">{DateString(data.date)}</span>
             <audio src={`${Settings.podcastUrl}/${show}/${data.slug}.mp3`} controls key="audio" />
             <Markdown options={{ forceBlock: false }} key="text">
             {data.description}
