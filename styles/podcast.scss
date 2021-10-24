@@ -5,22 +5,6 @@
     display: inline-block
 }
 
-.podcast-holder {
-    height: 25rem;
-    overflow: scroll hidden;
-    white-space: nowrap;
-    margin: 2rem auto;
-}
-
-.podcast-holder.full {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    overflow: inherit;
-}
-
 .large-icon {
     font-size:  min(14rem, 32.5vw) !important;
     width: 100% !important;

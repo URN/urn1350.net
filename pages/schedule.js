@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Axios from 'axios';
 import YAML from 'yaml';
-import { Button, Card } from '@material-ui/core';
+import { Button, Card, Typography } from '@material-ui/core';
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -29,7 +29,7 @@ export default function Page({schedule}) {
         title={`Schedule - ${Settings.siteTitle}`}
       />
       <main>
-        <h1>Full Schedule</h1>
+      <Typography gutterBottom variant="h1" component="div" key="title" className="h">Full Schedule</Typography>
         <div className="day-container">
         {
 

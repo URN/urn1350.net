@@ -34,7 +34,7 @@
   }
   
   $container-sizes: (
-    sm: 95vw,
+    na: 95vw,
     lg: 75rem,
   );
   
@@ -52,3 +52,45 @@
       }
     }
   }
+
+.index-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.schedule-parent {
+    min-width: 30rem;
+    margin: 0 2rem;
+    display: inline-block;
+}
+
+.podcast-holder {
+  white-space: nowrap;
+  margin: 2rem auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+@media (min-width: 600px){
+  .podcast-holder {
+    height: 25rem;
+    max-width: 95vw;
+    overflow: scroll hidden;
+    white-space: nowrap;
+    margin: 2rem auto;
+  }
+}
+
+.podcast-holder.full {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  overflow: inherit;
+}

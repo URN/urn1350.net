@@ -34,7 +34,7 @@ export function PodcastEpisode({data, show}) {
             alt={data.name}
             />
           <CardContent>
-            <Typography gutterBottom variant="h3" component="div" key="title">
+            <Typography gutterBottom variant="h3" component="div" key="title" className="h">
               {data.name}
             </Typography>
             <span className="show-time">{DateString(data.date)}</span>

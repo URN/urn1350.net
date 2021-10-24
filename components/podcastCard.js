@@ -17,7 +17,7 @@ import Settings from '../settings.json';
             alt={this.props.data.name}
           />
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="h6" component="div" noWrap className="h">
               {this.props.data.name}
             </Typography>
             <Typography noWrap>

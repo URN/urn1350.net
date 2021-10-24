@@ -60,7 +60,7 @@ function _Image(params) {
         <Toolbar>
           <Typography variant="h6" component="span" className="title">
             <img src={`${Settings.cdnUrl}/content/images/logo.png`} />
-            {Settings.siteTitle}
+            <a href="/" className="h"> {Settings.siteTitle}</a>
           </Typography>
         </Toolbar>
         </AppBar>
@@ -68,7 +68,7 @@ function _Image(params) {
             <Toolbar>
             <Button href="/">Home</Button>
             <Button href="/podcasts">Podcasts</Button>
-            <Button>Listen Now</Button>
+            <Button href="/listen">Listen Now</Button>
           
         </Toolbar>
     

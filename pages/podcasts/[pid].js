@@ -2,6 +2,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 
 import Button from '@material-ui/core/Button';
+import { Typography } from "@material-ui/core";
 
 import Axios from 'axios';
 
@@ -18,7 +19,9 @@ export default function Page({data}) {
         <Header
           title={`Podcast Not found - ${Settings.siteTitle}`}
         />
-          <h1 className="err">Unfortunately, the podcast you were looking for could not be found.</h1>
+         <Typography gutterBottom variant="h3" component="div" key="title" className="h err">
+          Unfortunately, the podcast you were looking for could not be found.
+          </Typography>
         <Footer />
       </>
     );
@@ -31,7 +34,9 @@ export default function Page({data}) {
         description={data.description}
       />
       <main>
-        <h1>{data.name}</h1>
+      <Typography gutterBottom variant="h1" component="div" key="title" className="h">
+              {data.name}
+            </Typography>
         <p className="description">{data.description}</p>
 
         {
