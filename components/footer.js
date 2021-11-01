@@ -13,7 +13,7 @@ import Settings from '../settings.json';
         <div>
             <strong>&copy; URN 2021</strong><br/>
             University Radio Nottingham<br/>
-            <a href="https://urn1350.net/pages/competitions/">Competition Terms</a><br/>
+            <a href="/pages/competitions/">Competition Terms</a><br/>
         </div>
         <div>
             <strong>Winner of Best Student Radio Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014, 2016,
