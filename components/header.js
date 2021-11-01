@@ -50,6 +50,9 @@ function _Image(params) {
           <_Title title={this.props.title} />
           <_Image image={this.props.image} />
           <_Description description={this.props.description} />
+          <link rel="icon" type="image/png" href="https://content.urn1350.net/content/images/icon-96.png" sizes="96x96"/>
+          <link rel="icon" type="image/png" href="https://content.urn1350.net/content/images/icon-64.png" sizes="64x64"/>
+          <link rel="icon" type="image/png" href="https://content.urn1350.net/content/images/icon-32.png" sizes="32x32"/>
           <Head>
             <meta property="fb:app_id" content="966242223397117" />
             <meta charSet="utf-8" />
