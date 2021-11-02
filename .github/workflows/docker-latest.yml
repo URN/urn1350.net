@@ -13,7 +13,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v5
         with:
           registry: ghcr.io
-          image: urn/site
+          image: urn1350.net
           username: Emersont1
           password: ${{ secrets.CONTAINER_REGISTRY }}
           tags: latest
