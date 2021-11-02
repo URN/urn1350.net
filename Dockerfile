@@ -1,4 +1,4 @@
-FROM node:15-alpine
+FROM node:16
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -15,7 +15,7 @@ RUN apk add --no-cache build-base python2 py2-pip;\
 
 # Bundle app source
 COPY . .
-RUN npm run build
+#RUN npm run build
 
 EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "dev" ]
