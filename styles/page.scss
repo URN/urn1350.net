@@ -61,7 +61,7 @@
 }
 
 .schedule-parent {
-    min-width: 30rem;
+    width: min(30rem, 95vw);
     margin: 0 2rem;
     display: inline-block;
 }

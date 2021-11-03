@@ -2,7 +2,7 @@
     padding: 1rem;
     text-align: center;
     height: 425px;
-    margin-top:12.5px;
+    margin-top: 12.5px;
     margin-bottom: 25px;
 }
 
@@ -10,12 +10,19 @@
 .schedule-parent iframe {
     width: 100%;
 }
-.schedule h1 {margin:  0; }
 
-.spotify{ padding: 0; width: 30rem;}
+.schedule h1 {
+    margin: 0;
+}
+
+.spotify {
+    padding: 0;
+    width: min(30rem, 95vw);
+    margin: auto;
+}
 
 .twitter-card {
-    width: 30rem;
+    width: min(30rem, 95vw);
     height: 45rem;
 }
 
@@ -30,6 +37,7 @@
 .news {
     background-color: #007a76 !important;
 }
+
 .after-dark {
     background-color: #2e343f !important;
 }
@@ -37,6 +45,7 @@
 .sport {
     background-color: #008ac4 !important;
 }
+
 .daytime {
     background-color: #c60047 !important;
 }
@@ -54,13 +63,14 @@
     padding: 0.05rem;
 
 }
+
 .schedule .MuiButtonBase-root {
     margin: 0.5rem;
 }
 
 .day-container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -79,6 +89,7 @@
 .day .show-name {
     max-width: 8rem;
 }
+
 .day .show-time {
     max-width: 5rem;
 }
