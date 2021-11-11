@@ -16,8 +16,7 @@ import Settings from '../settings.json';
             <a href="/pages/competitions/">Competition Terms</a><br/>
         </div>
         <div>
-            <strong>Winner of Best Student Radio Station at the Student Radio Awards 2010, 2011, 2012, 2013, 2014, 2016,
-                2017 and 2018!</strong><br/>
+            <strong>Winner of Best Student Radio Station at the Student Radio Awards 2021, 2018, 2017, 2016, 2014, 2013, 2012, 2011, 2010!</strong><br/>
             Contact the on-air presenters by messaging us on Instagram <a href="https://instagram.com/urn1350" target="_blank" rel="noopener">@URN1350</a>, or
             tweet <a href="https://twitter.com/urn1350" target="_blank" rel="noopener">@URN1350</a><br/>
             Find out more about us, and get in touch on our <a href="https://urn1350.net/pages/about">About</a> page. 
