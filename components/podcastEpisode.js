@@ -19,7 +19,7 @@ function DateString(date) {
 
 export function PodcastEpisode({data, show}) {
   let img = "";
-  if(true) {
+  if(data['has-image']) {
     img = `${Settings.podcastUrl}/${show}/${data.slug}.jpg`;
   }
   else {
