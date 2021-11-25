@@ -21,7 +21,7 @@ import Settings from '../settings.json';
             tweet <a href="https://twitter.com/urn1350" target="_blank" rel="noopener">@URN1350</a><br/>
             Find out more about us, and get in touch on our <a href="https://urn1350.net/pages/about">About</a> page. 
 			<a href="https://urn1350.net/pages/branding-pack/">Branding Pack</a> <br/>
-            Web Design &amp; Development by <a href="https://hacksoc.net">Hacksoc</a>
+            Web Design &amp; Development by <a href="https://hacksoc.net">HackSoc</a>
         </div>
     
       </AppBar>
