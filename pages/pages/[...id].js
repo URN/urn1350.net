@@ -58,7 +58,7 @@ export async function getServerSideProps(context) {
         })
       });
    data = (
-    await instance.get(`${Settings.cdnUrl}/website/${context.query.id}`)
+    await instance.get(`${Settings.cdnUrl}/website/${context.query.id.join("/")}`)
   ).data;
    } catch (err){
     console.log(err);
