@@ -15,7 +15,8 @@ function PageName(str){
     .join(' ');
 }
 
-export default function Page({data, slug}) {
+export default function Page({data, p}) {
+  const slug = p.join("/");
   if (!data) {
     return (
       <>
@@ -67,6 +68,6 @@ export async function getServerSideProps(context) {
 
 
   // Pass data to the page via props
-  return { props:  {data, slug: context.query.id} };
+  return { props:  {data, p: context.query.id} };
 }
 
