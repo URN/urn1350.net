@@ -37,8 +37,10 @@ export default function Page({data}) {
       <Typography gutterBottom variant="h1" component="div" key="title" className="h">
               {data.name}
             </Typography>
+            {
+            data.links? Object.entries(data.links).filter(([k,v]) => k != "").map(([k,v])=>(<Button className="podcast-button" variant="contained" color="primary" href={v}>{k}</Button>)):<></>
+            }
         <p className="description">{data.description}</p>
-
         {
             data.episodes.map(x=>(<PodcastEpisode data={x} show={data.slug} key={x.slug}/>))
         }

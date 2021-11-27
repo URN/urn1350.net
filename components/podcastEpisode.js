@@ -27,7 +27,7 @@ export function PodcastEpisode({data, show}) {
   }
 
   return (
-  <Card className="podcast-episode" key={data.slug} elevation="3">
+  <Card className="podcast-episode" key={data.slug} elevation="3" id={data.slug}>
           <CardMedia
             component="img"
             image={img}
