@@ -57,7 +57,7 @@ export default function Page({schedule}) {
      }
 
     return (
-    <div className={today[x].type + " show"} key={x}>
+    <div className={today[x].type + " show nonce-key"} key={x}>
       <span className="show-time">{time}</span>
       <span className="show-name">{x}</span>
    </div>);
