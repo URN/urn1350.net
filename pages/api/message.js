@@ -1,9 +1,12 @@
 import Axios from 'axios';
+import requestIp from 'request-ip'
 
 
 export default async function handler(req, res) {
     var url = process.env.SLACK_URL
     var x = await  Axios.post(url, {text:req.body.msg})
+
+    const detectedIp = requestIp.getClientIp(req)
     
     var discord = process.env.DISCORD_URL
     var discordResp = await Axios.post(discord, {
@@ -16,7 +19,7 @@ export default async function handler(req, res) {
           "fields": [
             {
               "name": "IP Address",
-              "value": "0.0.0.0",
+              "value": detectedIp,
               "inline": true
             },
             {
