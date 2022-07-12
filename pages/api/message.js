@@ -1,15 +1,20 @@
 import Axios from 'axios';
 import requestIp from 'request-ip'
 
+// Any IP starting with 128.243 belongs to Uni of Nottingham
+const UON_PREFIX = "128.243"
+
 
 export default async function handler(req, res) {
     var url = process.env.SLACK_URL
     var x = await  Axios.post(url, {text:req.body.msg})
 
     const detectedIp = requestIp.getClientIp(req)
+
+    const campus = detectedIp.indexOf("128.243") == 0;
     
     var discord = process.env.DISCORD_URL
-    var discordResp = await Axios.post(discord, {
+    await Axios.post(discord, {
       "content": null,
       "embeds": [
         {
@@ -24,7 +29,7 @@ export default async function handler(req, res) {
             },
             {
               "name": "On Campus",
-              "value": "No :x:",
+              "value": campus ? "Yes :white_check_mark:" : "No :x:",
               "inline": true
             }
           ]
