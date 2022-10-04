@@ -13,6 +13,10 @@ export default async function handler(req, res) {
 
     const campus = detectedIp.indexOf("128.243") == 0;
     
+    if (req.body.msg.length >= 200) {
+        return res.status(200).json({});
+    }
+    
     var discord = process.env.DISCORD_URL
     await Axios.post(discord, {
       "content": null,
