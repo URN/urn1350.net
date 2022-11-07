@@ -90,6 +90,10 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
         }
         
       }
+      
+      let randomised = Math.floor(Math.random() * 10000000);
+      
+      let streamURL = `https://live.urn1350.net/listen?cache=${randomised}`;
 
       return (
         
@@ -99,7 +103,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
             <span className="show-name">{show_name}</span>
             <span className="show-time">From {time}</span>
             <br/>
-            <audio src="https://live.urn1350.net/listen"  controls />
+            <audio src={streamURL} controls />
             <form onSubmit={this.handleOnSubmit}>
             <TextField
           className="message-show"
