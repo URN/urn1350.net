@@ -71,7 +71,6 @@ function _Image(params) {
             <Toolbar>
             <Button href="/">Home</Button>
             <Button href="/podcasts">Podcasts</Button>
-            <Button href="/listen">Listen Now</Button>
             <Button href="/pages/about">About Us</Button>
             <Button href="/pages/committee">Committee</Button>
 
