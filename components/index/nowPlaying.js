@@ -100,11 +100,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
       return (
         
         <Paper className="now-playing"  elevation={3}>
-	<Alert variant="filled" severity="warning">
-	      <AlertTitle>University Radio Nottingham is offline.</AlertTitle>
-	      University Radio Nottingham is currently not online. We're working with the University to resolve this issue and hope to be broadcasting again as soon as possible. Keep checking this page for updates and sorry for any inconvinience caused.
-	      </Alert> 
-	    {/*
+	    
             <h1>Now Playing</h1>
             <span className="show-name">{show_name}</span>
             <span className="show-time">From {time}</span>
@@ -122,7 +118,6 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
         />
         <Button variant="contained" color="primary" onClick={this.send_message}>Submit</Button>
         </form>
-	*/}
         </Paper>
       );
     }
