@@ -21,7 +21,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
   export default class ImageHeader extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { msg: "", schedule: null};
+      this.state = { msg: "", schedule: null, cacheBust: Math.floor(Math.random() * 10000000) };
       this.send_message = this.send_message.bind(this);
       Axios.get(`${Settings.cdnUrl}/schedule.yml`).then(r => {
         const schedule = YAML.parse(r.data)
@@ -93,9 +93,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
         
       }
       
-      let randomised = Math.floor(Math.random() * 10000000);
-      
-      let streamURL = `https://live.urn1350.net/listen?cache=${randomised}`;
+      let streamURL = `https://live.urn1350.net/listen?cache=${this.state.cacheBust}`;
 
       return (
         
@@ -111,7 +109,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
           className="message-show"
           label="Message The Show"
           multiline
-          rows={4}
+          minRows={4}
           variant="standard"
           value={this.state.msg}
           onChange={this.update}
@@ -121,4 +119,4 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
         </Paper>
       );
     }
-}11
+}
