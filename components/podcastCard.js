@@ -14,11 +14,11 @@ import Settings from '../settings.json';
           <CardMedia
             component="img"
             image={`${Settings.podcastUrl}/${this.props.data.slug}.jpg`}
-            alt={this.props.data.name}
+            alt={this.props.data.title}
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div" noWrap className="h">
-              {this.props.data.name}
+              {this.props.data.title}
             </Typography>
             <Typography noWrap>
                 {this.props.data.description}

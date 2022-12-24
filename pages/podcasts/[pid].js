@@ -6,8 +6,7 @@ import { Typography } from "@material-ui/core";
 
 import Axios from 'axios';
 
-import {PodcastEpisode} from '../../components/podcastEpisode';
-
+import podcastInfo from "../../public/podcasts.json";
 
 import Settings from '../../settings.json';
 
@@ -29,21 +28,19 @@ export default function Page({data}) {
   return (
     <>
       <Header
-        title={`${data.name} - ${Settings.siteTitle}`}
-        image={data.image}
+        title={`${data.title} - ${Settings.siteTitle}`}
         description={data.description}
       />
       <main>
       <Typography gutterBottom variant="h1" component="div" key="title" className="h">
-              {data.name}
+              {data.title}
             </Typography>
-            {
-            data.links? Object.entries(data.links).filter(([k,v]) => k != "").map(([k,v])=>(<Button className="podcast-button" variant="contained" color="primary" href={v}>{k}</Button>)):<></>
-            }
         <p className="description">{data.description}</p>
-        {
-            data.episodes.map(x=>(<PodcastEpisode data={x} show={data.slug} key={x.slug}/>))
-        }
+        <iframe style={{borderRadius: "12px"}} src={`https://open.spotify.com/embed/show/${data.spotify}?utm_source=generator`} width="100%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <div style={{textAlign: "center"}}>
+          <Button style={{fontSize: "1.5em"}} target="_blank" className="podcast-button" variant="contained" color="primary" href={`https://open.spotify.com/show/${data.spotify}`}>Listen to older episodes on Spotify</Button>
+        </div>
         </main>
       <Footer/>
     </>
@@ -52,20 +49,8 @@ export default function Page({data}) {
 
 // This gets called on every request
 export async function getServerSideProps(context) {
-  // Fetch data from external API
-  var data = null;
-  try {
-   data = (
-    await Axios.get(`${Settings.podcastUrl}/${context.query.pid}.json`)
-  ).data;
-   } catch (err){
-
-   }
-  if (data == null) {
-  }
-
+  var data = podcastInfo[context.query.pid];
 
   // Pass data to the page via props
   return { props:  {data} };
 }
-

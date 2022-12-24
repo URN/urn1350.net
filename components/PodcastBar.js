@@ -12,6 +12,7 @@ import PlusIcon from '@material-ui/icons/Add'
 import PodcastCard from './podcastCard'
 import Settings from '../settings.json';
 
+import podcastInfo from "../public/podcasts.json";
 
 export default class PodcastBar extends React.Component {
     constructor(props){
@@ -19,19 +20,7 @@ export default class PodcastBar extends React.Component {
         this.state = {};
     }
 
-    componentDidMount(){
-        const that = this;
-        Axios.get(`${Settings.podcastUrl}/hstp.json`).then(x => {
-            var y = x.data;
-            if(!this.props.full){
-                y.podcasts = x.data.podcasts.slice(0,3);
-            }
-            that.setState(y);
-        })
-    }
-
     render() {
-        if(this.state.podcasts){
             return (
                 <>
                 {
@@ -39,7 +28,7 @@ export default class PodcastBar extends React.Component {
                 }
                   <div className={`podcast-holder ${this.props.full?"full":""}`}>
                   {
-                      this.state.podcasts.map(x=><PodcastCard data={x} key={x.slug}/>)
+                    Object.keys(podcastInfo).map(x => <PodcastCard data={podcastInfo[x]} key={x}/>)
                   }
                   
                   {this.props.full?<></>:<Card className="podcast-card">
@@ -56,13 +45,5 @@ export default class PodcastBar extends React.Component {
         </CardActionArea>
       </Card>}
       </div> </>);
-        }else{
-      const xs = <></>;
-      return (
-        <>
-          <h1>Podcasts</h1>
-          <CircularProgress color="primary" />
-        </>
-      );}
     }
 }

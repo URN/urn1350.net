@@ -1,0 +1,20 @@
+{
+  "urngasm": {
+    "spotify": "2oR3CFAxRzhLnFDSZXtAxD",
+    "description": "This is URN's 'sexiest' sex and relationships podcast. Hosted by Ben, Cora, and Izzy - breaking the stigma around naughty nattering!",
+    "title": "URNgasm",
+    "slug": "urngasm"
+  },
+  "the-roundtable": {
+    "spotify": "7pn6HYmXYr9w2XvTYXcRr6",
+    "description": "Welcome to the Roundtable, URN's ideological discussion podcast. From the left to the right, we see whether we agree on the big issues!",
+    "title": "The Roundtable",
+    "slug": "the-roundtable"
+  },
+  "mellob-experience": {
+    "spotify": "62ENuKmC6fBv9868ZQEQ7e",
+    "description": "Within the Mellob Experience, you can witness permanently-under-a-rock Ben try to discover iconic movies/music/everything he should have seen - as well as chat about a mixture of books and anything at all! Joined by the much smarter co-host Jacob, it is not an experience you want to miss.",
+    "title": "The Mellob Experience",
+    "slug": "mellob-experience"
+  }
+}
