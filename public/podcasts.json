@@ -16,5 +16,12 @@
     "description": "Within the Mellob Experience, you can witness permanently-under-a-rock Ben try to discover iconic movies/music/everything he should have seen - as well as chat about a mixture of books and anything at all! Joined by the much smarter co-host Jacob, it is not an experience you want to miss.",
     "title": "The Mellob Experience",
     "slug": "mellob-experience"
+  },
+  "urn": {
+    "spotify": "6zfRbAD54jxzJBwITs6o9T",
+    "description": "All other content from University Radio Nottingham",
+    "title": "University Radio Nottingham",
+    "slug": "urn",
+    "image": "https://i.scdn.co/image/15de83d5ae9f2b26b479cecbab81a82b907338b5"
   }
 }

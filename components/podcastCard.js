@@ -13,7 +13,7 @@ import Settings from '../settings.json';
         <CardActionArea href={`/podcasts/${this.props.data.slug}`}>
           <CardMedia
             component="img"
-            image={`${Settings.podcastUrl}/${this.props.data.slug}.jpg`}
+            image={this.props.data.image ? this.props.data.image : `${Settings.podcastUrl}/${this.props.data.slug}.jpg`}
             alt={this.props.data.title}
           />
           <CardContent>
