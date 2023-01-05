@@ -110,7 +110,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
             <span className="show-name">{show_name}</span>
             <span className="show-time">From {time}</span>
             <br/>
-            <audio src={streamURL} controls />
+            <audio src={streamURL} controls preload="none" />
             <form onSubmit={this.handleOnSubmit}>
             <TextField
           className="message-show"
