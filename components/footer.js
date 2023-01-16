@@ -16,6 +16,8 @@ export default class Header extends React.Component {
           <a href="/pages/competitions/">Competition Terms</a><br />
         </div>
         <div>
+        </div>
+        <div>
           <strong>Winner of Best Student Radio Station at the Student Radio Awards 2021, 2018, 2017, 2016, 2014, 2013, 2012, 2011, 2010!</strong><br />
           Find out more about us, and get in touch on our <a href="https://urn1350.net/pages/about">About</a> page.
         </div>
