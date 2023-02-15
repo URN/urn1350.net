@@ -71,7 +71,7 @@ export default function Page({schedule}) {
 }
 
 export async function getStaticProps(context) {
-    const b = Math.floor(Math.random() * 1000);
+    const cb = Math.floor(Math.random() * 1000);
     const data = await Axios.get(`${Settings.cdnUrl}/schedule.yml?cb=${cb}`);
     const schedule = YAML.parse(data.data);
     return {
