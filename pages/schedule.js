@@ -71,10 +71,10 @@ export default function Page({schedule}) {
 }
 
 export async function getStaticProps(context) {
-    const data = await Axios.get(`${Settings.cdnUrl}/schedule.yml`);
+    const b = Math.floor(Math.random() * 1000);
+    const data = await Axios.get(`${Settings.cdnUrl}/schedule.yml?cb=${cb}`);
     const schedule = YAML.parse(data.data);
     return {
       props: {schedule}, // will be passed to the page component as props
     }
   }
-  
