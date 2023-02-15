@@ -20,8 +20,8 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
   export default class Schedule extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {schedule: null};
-      Axios.get(`${Settings.cdnUrl}/schedule.yml`).then(r => {
+      this.state = {schedule: null, rand: Math.floor(Math.random() * 1000)};
+      Axios.get(`${Settings.cdnUrl}/schedule.yml?cb=${rand}`).then(r => {
         const schedule = YAML.parse(r.data)
         this.setState({
           ...this.state,
