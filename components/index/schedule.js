@@ -21,7 +21,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
     constructor(props) {
       super(props);
       this.state = {schedule: null, rand: Math.floor(Math.random() * 1000)};
-      Axios.get(`${Settings.cdnUrl}/schedule.yml?cb=${rand}`).then(r => {
+      Axios.get(`${Settings.cdnUrl}/schedule.yml?cb=${this.state.rand}`).then(r => {
         const schedule = YAML.parse(r.data)
         this.setState({
           ...this.state,
