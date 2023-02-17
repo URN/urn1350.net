@@ -5,6 +5,20 @@
     "title": "URNgasm",
     "slug": "urngasm"
   },
+  "offair": {
+    "spotify": "7M9oXJU4YDz5UjlJYOHL88",
+    "description": "Join Erin as she interviews the members of University Radio Nottingham about their lives off air.",
+    "title": "Off Air With... URN",
+    "slug": "offair",
+    "image": "https://i.scdn.co/image/ab67656300005f1f6766149d6421d856617aa4bc"
+  },
+  "ecofrenzy": {
+    "spotify": "5BRoczi4hRoewb5eI2ZFzx",
+    "description": "University Radio Nottingham's official environmentalist podcast brought to you by Erin, Gabby and Georgia. Listen in to hear all things sustainability and broken down into fun, informative, relatable content that doesn't judge the listener!",
+    "title": "EcoFrenzy",
+    "slug": "ecofrenzy",
+    "image": "https://i.scdn.co/image/ab67656300005f1f8f3d8afbca8b20dc10816b4b"
+  },
   "the-roundtable": {
     "spotify": "7pn6HYmXYr9w2XvTYXcRr6",
     "description": "Welcome to the Roundtable, URN's ideological discussion podcast. From the left to the right, we see whether we agree on the big issues!",
