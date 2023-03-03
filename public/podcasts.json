@@ -1,4 +1,11 @@
 {
+  "urn-interviews": {
+    "spotify": "2WNCH3gnNaIIMp2aQ7z7Ky",
+    "description": "Here is the back-catalogue of people we've interviewed in the past",
+    "title": "URN Interviews",
+    "slug": "urn-interviews",
+    "image": "https://i.scdn.co/image/ab6765630000ba8a91de447530e7b3519efd7fcf"
+  },
   "urngasm": {
     "spotify": "2oR3CFAxRzhLnFDSZXtAxD",
     "description": "This is URN's 'sexiest' sex and relationships podcast. Hosted by Ben, Cora, and Izzy - breaking the stigma around naughty nattering!",
