@@ -11,7 +11,7 @@ export default class Header extends React.Component {
     return (
       <AppBar color="primary" position="static" component="footer">
         <div>
-          <strong>&copy; URN 2021</strong><br />
+          <strong>&copy; URN {(new Date()).getFullYear()}</strong><br />
           University Radio Nottingham<br />
           <a href="/pages/competitions/">Competition Terms</a><br />
         </div>
